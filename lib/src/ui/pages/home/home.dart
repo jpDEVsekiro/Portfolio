@@ -8,26 +8,36 @@ class Home extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            tooltip: 'GitHub',
+            icon: const Icon(Icons.code),
+            onPressed: controller.goToGitHub,
+          ),
+          IconButton(
+            tooltip: 'LinkedIn',
+            icon: const Icon(Icons.person),
+            onPressed: controller.goToLinkedIn,
+          ),
+        ],
+      ),
       body: Scrollbar(
         controller: controller.scrollController,
         interactive: true,
         child: SingleChildScrollView(
             controller: controller.scrollController,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  fit: BoxFit.fitWidth,
+                SizedBox(
+                  width: double.infinity,
+                  height: 800,
+                  child: Image.asset(
+                    'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
-                Image.asset(
-                  'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
-                  width: Get.width,
-                  height: Get.height,
-                  fit: BoxFit.cover,
-                )
               ],
             )),
       ),
