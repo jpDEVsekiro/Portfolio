@@ -16,9 +16,24 @@ class Home extends GetView<HomeController> {
             onPressed: controller.goToGitHub,
           ),
           IconButton(
+            tooltip: 'about me',
+            icon: const Icon(Icons.code),
+            onPressed: controller.scrollAboutMe,
+          ),
+          IconButton(
             tooltip: 'LinkedIn',
             icon: const Icon(Icons.person),
             onPressed: controller.goToLinkedIn,
+          ),
+          IconButton(
+            tooltip: 'Whatsapp',
+            icon: const Icon(Icons.person),
+            onPressed: controller.goToWhatsApp,
+          ),
+          IconButton(
+            tooltip: 'e-mail',
+            icon: const Icon(Icons.person),
+            onPressed: controller.goToEmail,
           ),
         ],
       ),
@@ -30,6 +45,22 @@ class Home extends GetView<HomeController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  width: double.infinity,
+                  height: 800,
+                  child: Image.asset(
+                    'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  height: 800,
+                  child: Image.asset(
+                    'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
                 SizedBox(
                   width: double.infinity,
                   height: 800,
