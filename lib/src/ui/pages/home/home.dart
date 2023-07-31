@@ -8,6 +8,7 @@ class Home extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF6246C1),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -43,7 +44,7 @@ class Home extends GetView<HomeController> {
         child: SingleChildScrollView(
             controller: controller.scrollController,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
                   width: double.infinity,
@@ -53,20 +54,21 @@ class Home extends GetView<HomeController> {
                     fit: BoxFit.fitHeight,
                   ),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 800,
-                  child: Image.asset(
-                    'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
-                    fit: BoxFit.fitHeight,
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'About me',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 800,
-                  child: Image.asset(
-                    'assets/gifs/hilda-and-tepig-watching-castelia-city-pokemon-pixel-moewalls-com_AdobeExpress.gif',
-                    fit: BoxFit.fitHeight,
+                const CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage(
+                    'assets/images/me.jpeg',
                   ),
                 ),
               ],
