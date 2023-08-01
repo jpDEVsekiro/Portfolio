@@ -8,7 +8,7 @@ class Home extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF6246C1),
+      backgroundColor: const Color(0xFFF6F6F6),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -54,21 +54,17 @@ class Home extends GetView<HomeController> {
                     fit: BoxFit.fitHeight,
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'About me',
-                    style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
                 const CircleAvatar(
                   radius: 100,
                   backgroundImage: AssetImage(
                     'assets/images/me.jpeg',
+                  ),
+                ),
+                const Text(
+                  'João Pedro',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
